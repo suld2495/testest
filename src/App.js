@@ -1,6 +1,5 @@
 import React from 'react';
 import Alert from './components/common/Alert/Alert';
-import AlertTemplate from './components/common/Alert/template/AlertTemplate';
 import Header from './components/layout/Header';
 import Section01 from './components/section/section01/Section01';
 import Section02 from './components/section/section02/Section02';

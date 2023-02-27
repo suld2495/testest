@@ -6,7 +6,7 @@ import styled from './section.module.css';
 import { Carousel } from 'react-responsive-carousel';
 
 export default function Section01() {
-  const [height, backgroundImage] = useBackgrund('1681px', {
+  const [backgroundImage] = useBackgrund('1681px', {
     pc: 'url(/images/bg05.jpg)',
     mobile: 'url(/images/mobile/bg05_m.jpg)',
     mobileHeight: 1131
