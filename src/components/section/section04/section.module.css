@@ -28,7 +28,7 @@
 }
 
 .all .check_span {
-  font-size: 2.8rem;  
+  font-size: 2rem;  
   color: #fff;
   font-weight: bold;
 }
@@ -42,7 +42,7 @@
 }
 
 .subcheck > div {
-  margin-bottom: 10px;
+  margin-bottom: 7px;
   display: block;
 }
 
@@ -66,7 +66,7 @@
 .button {
   display: flex;
   justify-content: center;
-  margin-top: 92px;
+  margin-top: 56px;
 }
 
 .compelete {
@@ -81,6 +81,18 @@
 }
 
 @media screen and (max-width: 640px) {
+  .button {
+    margin-top: 37px;
+  }
+
+  .all {
+    margin-bottom: 25px;
+  }
+
+  .subcheck > div {
+    margin-bottom: 7;
+  }
+
   .section .input > div > div {
     width: 100% !important;
   }
@@ -94,7 +106,7 @@
   }
   
   .all .check_span {
-    font-size: 2.4rem;
+    font-size: 1.4rem;
   }
 
   .subcheck .check_span {
@@ -102,7 +114,7 @@
   }
 
   .subcheck .check_span a {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -112,7 +124,7 @@
   }
   
   .subcheck .check_span a {
-    width: 110px;
+    width: 70px;
   }
   
   .section {

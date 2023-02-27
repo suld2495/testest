@@ -69,7 +69,7 @@
     box-sizing: border-box;
   }
 
-  .wish img:nth-child(n + 3) {
+  .wish img:nth-child(n + 4) {
     width: 100%;
     max-width: 800px;
   }

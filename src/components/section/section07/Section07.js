@@ -13,8 +13,7 @@ export default function Section01() {
   });
 
   return (
-    <section className={styled.section}>
-      <div className={styled.background} style={{ backgroundImage, height }}></div>
+    <section className={styled.section} style={{ backgroundImage }}>
       <div className={styled.text}>
         <div className={styled.title}>
           <img src="/images/title04.png" alt='EVENT2' />

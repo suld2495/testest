@@ -3,7 +3,13 @@ import React from 'react';
 const HEIGHT = 800;
 
 export default function useBackgrund(defaultheight, bg) {
-  const [height, setHeight] = React.useState(defaultheight);
+  const [height, setHeight] = React.useState(() => {
+    if (window.outerWidth > HEIGHT) {
+      return defaultheight;
+    }
+    
+    return bg.mobileHeight * window.outerWidth / 640 + 'px';
+  });
   const [backgroundImage, setBackgroundImage] = React.useState(() => (
     window.outerWidth <= HEIGHT ? bg.mobile : bg.pc
   ));
