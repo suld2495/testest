@@ -1,0 +1,108 @@
+.section {
+  position: relative;
+}
+
+.background {
+  height: 971px;
+  background-position: center;
+}
+
+.text {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  position: relative;
+  margin-top: 132px;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 105px;
+}
+
+.link {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 62px;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .title {
+    padding: 0 20px;
+  }
+
+  .title img {
+    max-width: 800px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .background {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .title {
+    margin-top: 17%;
+  }
+
+  .bottom {
+    bottom: 10%;
+  }
+
+  .link {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .link img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .link {
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .bottom {
+    bottom: 10%;
+  }
+
+  .link {
+    width: 55%;
+    margin-bottom: 10%;
+  }
+
+  .link + div {
+    display: flex;
+    justify-content: center;
+  }
+
+  .link + div img {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .bottom {
+    bottom: 15%;
+  }
+
+  .link {
+    width: 50%;
+    margin-bottom: 5%;
+  }
+}

@@ -1,0 +1,219 @@
+.section {
+  position: relative;
+}
+
+.background {
+  height: 1315px;
+  background-position: center;
+}
+
+.text {
+  position: absolute;
+  top: 0;
+  max-width: 1100px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.title {
+  margin-top: 105px;
+}
+
+.subtext {
+  margin-top: 130px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.subtext img {
+  margin: 0 auto;
+  margin-bottom: 96px;
+}
+
+.subtext h2 {
+  color: #fff;
+  font-size: 4rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.subtext h2 span {
+  color: #4fc4d5;
+}
+
+.subtext p {
+  color: #d5d5d5;
+  font-size: 20px;
+}
+
+.subtext h2 + p {
+  margin-bottom: 13px;
+}
+
+.download {
+  margin-top: 60px;
+}
+
+.download h3 {
+  font-size: 3rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.download_text {
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.link {
+  display: flex;
+  gap: 12px;
+  margin-top: 65px;
+}
+
+.mobile {
+  display: none;
+}
+
+.reward {
+  position: relative;
+}
+
+.reward > ul {
+  display: flex;
+  gap: 30px;
+}
+
+@media screen and (max-width: 1200px) {
+  .text {
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .subtext + img {
+    width: 100%;
+    max-width: 1100px;
+  }
+
+  .background {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .pc {
+    display: none;
+  }
+  
+  .mobile {
+    display: block;
+  }
+  
+  .text > img {
+    width: 100%;
+  }
+  
+  .subtext p {
+    margin: 0 auto;
+    word-break: keep-all;
+    line-height: 1.4;
+  }
+  
+  .title {
+    margin-top: 12%;
+  }
+  
+  .subtext img {
+    margin-bottom: 15%;
+  }
+  
+  .text {
+    padding: 0 40px;
+  }
+
+  .reward > ul {
+    flex-direction: column;
+  }
+
+  .reward > ul img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .subtext img {
+    width: 80%;
+  }
+
+  .subtext h2 {
+    font-size: 3.5rem;
+  }
+
+  .subtext p {
+    font-size: 1.7rem;
+  }
+
+  .subtext h2 + p {
+    margin-bottom: 3px;
+  }
+
+  .download {
+    margin-top: 10%;
+    width: 100%;
+  }
+
+  .download > div {
+    width: 100%;
+    height: 80px;
+  }
+  
+  .download > div span {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .subtext {
+    margin-top: 30%;
+  }
+  .subtext img {
+    margin-bottom: 10%;
+  }
+  
+  .link {
+    width: 80%;
+    margin-top: 10%;
+  }
+
+  .link + div {
+    display: flex;
+    justify-content: center;
+  }
+
+  .link img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .subtext h2 {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .subtext {
+    margin-bottom: 20px;
+  }
+
+  .reward > ul {
+    gap: 15px;
+  }
+}

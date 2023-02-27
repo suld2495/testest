@@ -1,0 +1,68 @@
+.itembox {
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 17px;
+  position: absolute;
+  background-color: #fff;
+  letter-spacing : -0.5px;
+  padding-right: 30px;
+}
+
+.itembox h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.itembox ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.itembox li {
+  position: relative;
+  font-size: 1.4rem;
+  padding-left: 10px;
+  color: #777;
+}
+
+.itembox li::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  background-color: #0d92d5;
+  position: absolute;
+  top: 5px;
+  left: 0;
+}
+
+.close {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  right: 10px;
+  top: 21px;
+  cursor: pointer;
+}
+
+.close::after,
+.close::before {
+  content: '';
+  width: 13px;
+  height: 1px;
+  background-color: #b1b1b1;
+  display: block;
+  left: 0;
+  top: 7px;
+  position: absolute;
+}
+
+.close:after {
+  transform: rotate(-45deg);
+}
+
+.close:before {
+  transform: rotate(45deg);
+}
