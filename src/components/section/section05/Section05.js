@@ -4,6 +4,7 @@ import Button from '../../common/Button/Button';
 import ItemBox from '../../common/ItemBox/ItemBox';
 import styled from './section.module.css';
 import React from 'react';
+import { rewardData } from '../../../config/RewardData';
 
 export default function Section05() {
   const [popupNone, setPopupNone] = React.useState(false);
@@ -22,17 +23,32 @@ export default function Section05() {
   });
 
   const handleMouseOver = ({ target }) => {
-    console.log(1);
+    const { index } = target.dataset;
 
-    if (popupNone) {
+    if (popupNone || !index) {
       return;
+    }
+
+    let position = [0, 0];
+
+    if (index === '1') {
+      position = [target.offsetLeft - 180, target.offsetTop + 50];
+    } else if (index === '2') {
+      position = [target.offsetLeft - 190, target.offsetTop + 50];
+    } else if (index === '3') {
+      position = [target.offsetLeft - 150, target.offsetTop + 50];
+    }
+
+    if (window.outerWidth <= 640) {
+      position[0] = '50%';
+    } else if (window.outerWidth < 1000) {
+      position[0] = target.offsetLeft - 20;
     }
 
     setPopup({
       visible: true,
-      title: '안녕하세요',
-      content: ['테스트입니다', '어서오세요'],
-      position: [target.offsetLeft - 100, target.offsetTop + 50]
+      position: position,
+      ...rewardData[Number(index) - 1]
     });
   };
 
@@ -40,10 +56,6 @@ export default function Section05() {
   const handleMouseOut = (e) => {
     const { clientX, clientY } = e;
     const rect = popupRef.current?.getBoundingClientRect();
-
-    if (window.outerWidth < 850) {
-      return;
-    }
 
     if (rect 
         && rect.x <= clientX && clientX <= rect.x + rect.width
@@ -77,16 +89,16 @@ export default function Section05() {
         <div className={styled.reward}>
           <ul>
             <li>
-              <img className={styled.pc}  src='/images/present03_01.png' alt='보상' onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} />
-              <img className={styled.mobile}  src='/images/mobile/present03_m01.png' alt='보상' onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} />
+              <img className={styled.pc}  src='/images/present03_01.png' alt='보상' onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} data-index="1" />
+              <img className={styled.mobile}  src='/images/mobile/present03_m01.png' alt='보상' onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} data-index="1" />
             </li>
             <li>
-              <img className={styled.pc}  src='/images/present03_02.png' alt='보상' onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} />
-              <img className={styled.mobile}  src='/images/mobile/present03_m02.png' alt='보상' onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} />
+              <img className={styled.pc}  src='/images/present03_02.png' alt='보상' onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} data-index="2" />
+              <img className={styled.mobile}  src='/images/mobile/present03_m02.png' alt='보상' onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} data-index="3" />
             </li>
             <li>
-              <img className={styled.pc}  src='/images/present03_03.png' alt='보상' onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} />
-              <img className={styled.mobile}  src='/images/mobile/present03_m04.png' alt='보상' onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} />
+              <img className={styled.pc}  src='/images/present03_03.png' alt='보상' onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} data-index="3" />
+              <img className={styled.mobile}  src='/images/mobile/present03_m04.png' alt='보상' onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} data-index="3" />
             </li>
           </ul>
           { popup.visible && <ItemBox title={popup.title} content={popup.content} position={popup.position} ref={popupRef} onClose={handleClosePopup} />}

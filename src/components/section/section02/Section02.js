@@ -20,11 +20,11 @@ export default function Section01() {
       <div className={styled.background} style={{ backgroundImage, height }}></div>
       <div className={`${styled.text} title`}>
         <div className={styled.title}>
-          <p className={styled.mobile}>~ 03월 23일 전 까지</p>
+          <p className={styled.mobile}>~ 03월 27일 전 까지</p>
           <img className="title_img" src="/images/title01.png" alt='사전 등록' />
           <p onClick={notice} className={styled.mobile}>*유의사항</p>
           <div className={styled.pc}>
-            <span>~ 03월 23일 전 까지</span>
+            <span>~ 03월 27일 전 까지</span>
             <span onClick={notice}>*유의사항</span>
           </div>
         </div>

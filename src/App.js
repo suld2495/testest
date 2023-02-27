@@ -42,11 +42,6 @@ function App() {
     }}>
       <div className="App">
         <Header />
-        <div className='right'>
-          <input id='link' defaultValue={link} style={{ display: 'none' }} />
-          <img onClick={clickLink} src="/images/link_icon.png" alt='공유' data-clipboard-target="#link" />
-          <a href='https://game.naver.com/lounge/9UP_Collectable/home'><img src="/images/game_icon.png" alt='네이버 라운지' /></a>
-        </div>
         <main>
           <Section01 />
           <Section02 />

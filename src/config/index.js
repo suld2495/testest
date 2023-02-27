@@ -1,2 +1,2 @@
-export const GOOGLE_APP_URL = 'https://play.google.com/store/apps/details?id=com.aceproject.mpbr.aos.dist'
-export const IOS_APP_URL = 'https://apps.apple.com/kr/app/9up-%ED%94%84%EB%A1%9C%EC%95%BC%EA%B5%AC-kbo-%EB%AA%A8%EB%B0%94%EC%9D%BC-%EC%95%BC%EA%B5%AC-%EB%A7%A4%EB%8B%88%EC%A0%80/id1548445648'
+export const GOOGLE_APP_URL = 'https://9up.onelink.me/TEEg/1st9up'
+export const IOS_APP_URL = 'https://9up.onelink.me/TEEg/1st9up'

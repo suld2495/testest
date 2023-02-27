@@ -17,7 +17,7 @@ export default function Section03() {
         </div>
         <div className={styled.subtext}>
           <p>사전예약 신청하고<br className={styled.mobile} /> 원하는 선수를 획득하자!</p>
-          <p>사전예약 신청 기간 : <br /> 22년 3월 6일 ~ 23년 3월 23일</p>
+          <p>사전예약 신청 기간 : <br /> 23년 3월 6일 ~ 23년 3월 27일</p>
         </div>
         <div className={styled.wish}>
           <img className={styled.pc} src='/images/present01.png' alt='위시팩 구매권' />

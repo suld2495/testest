@@ -40,6 +40,14 @@
   cursor: pointer;
 }
 
+body .carousel.carousel-slider {
+  overflow: visible;
+}
+
+.control-dots {
+  display: none;
+}
+
 @media screen and (max-width: 600px) {
   .title_img {
     width: 70%;

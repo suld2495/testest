@@ -24,6 +24,58 @@
   margin-top: 105px;
 }
 
+.content {
+  margin-top: 130px;
+  width: 100%;
+}
+
+.content img {
+  width: 100%;
+}
+
+.container {
+  margin-top: 50px;
+  box-shadow: 0 5px 18px 0 rgb(0 0 0);
+}
+
+.youtube {
+  display: block;
+}
+
+.youtube img {
+  box-shadow: 0 5px 18px 0 rgb(0 0 0);
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  cursor: pointer;
+}
+
+.prev {
+  left: -62px;
+}
+
+.next {
+  right: -62px;
+}
+
+
+@media screen and (max-width: 1250px) {
+  .container {
+    margin-top: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .content a {
+    padding: 0 50px;
+  }
+}
+
+
 @media screen and (max-width: 1200px) {
   .text {
     padding: 0 20px;
@@ -62,5 +114,17 @@
 
   .title {
     margin-top: 12%;
+  }
+
+  .arrow {
+    width: 20px;
+  }
+  
+  .prev {
+    left: -42px;
+  }
+
+  .next {
+    right: -42px;
   }
 }

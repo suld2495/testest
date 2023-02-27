@@ -66,3 +66,9 @@
 .close:before {
   transform: rotate(45deg);
 }
+
+@media screen and (max-width: 640px) {
+  .itembox {
+    transform: translateX(-50%);
+  }
+}
