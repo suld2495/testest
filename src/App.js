@@ -20,19 +20,12 @@ const initialValue = {
 export const Context = React.createContext(initialValue);
 
 function App() {
-  const link = '링크';
   const [popup, setPopup] = React.useState(false);
   const [popupContent, setPopupContent] = React.useState();
 
   const changePopup = (value) => {
     setPopup(value);
   }
-
-  const clickLink = () => {
-    setPopup(true);
-    setPopupContent(<AlertTemplate>복사되었습니다.<br /> 원하는 곳에 붙여넣기 해 주세요.</AlertTemplate>);
-    navigator.clipboard.writeText('링크');
-  };
 
   return (
     <Context.Provider value={{
