@@ -8,6 +8,8 @@
   background-color: #fff;
   letter-spacing : -0.5px;
   padding-right: 30px;
+  transform: translateX(-50%);
+  min-width: 140px;
 }
 
 .itembox h1 {

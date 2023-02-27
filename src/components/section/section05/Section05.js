@@ -29,15 +29,7 @@ export default function Section05() {
       return;
     }
 
-    let position = [0, 0];
-
-    if (index === '1') {
-      position = [target.offsetLeft - 180, target.offsetTop + 50];
-    } else if (index === '2') {
-      position = [target.offsetLeft - 190, target.offsetTop + 50];
-    } else if (index === '3') {
-      position = [target.offsetLeft - 150, target.offsetTop + 50];
-    }
+    let position = [target.offsetLeft + target.getBoundingClientRect().width / 2, target.offsetTop + 100];
 
     if (window.outerWidth <= 640) {
       position[0] = '50%';

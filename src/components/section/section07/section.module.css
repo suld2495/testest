@@ -5,6 +5,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-height: 1681px;
+  box-sizing: border-box;
 }
 
 .text {
