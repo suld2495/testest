@@ -32,3 +32,13 @@
     display: flex;
   }
 }
+
+@media screen and (max-width: 400px) {
+  .header {
+    padding: 0 10px
+  }
+
+  .header .logo img {
+    width: 90%;
+  }
+}
