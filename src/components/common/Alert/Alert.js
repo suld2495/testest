@@ -1,10 +1,12 @@
 import React from 'react';
 import { Context } from '../../../App';
 import usePopup from '../../../hooks/usePopup';
+import useScroll from '../../../hooks/useScroll';
 import styled from './alert.module.css';
 
 export default function Alert({ children, width = '100%' }) {
   const context = React.useContext(Context);
+  useScroll(context.popup);
   const { closePopup } = usePopup();
 
   const style = {

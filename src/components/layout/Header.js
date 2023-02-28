@@ -2,8 +2,10 @@ import Menu from "./Menu";
 import styles from './header.module.css';
 import { Helmet } from "react-helmet";
 import { THUMNAIL, URL } from "../../config";
+import React from 'react';
 
 export default function Header() {
+  const [mobile, setMobile] = React.useState(false);
   const title = "9UP 프로야구";
   const description = "진정한 야덕을 위한 KBO 덕질 플랫폼, 9UP 프로야구!";
 
@@ -31,7 +33,12 @@ export default function Header() {
         <meta property="og:image:height" content="630" />
       </Helmet>
       <div className={styles.logo}><img src='/images/logo_top.png' alt="logo" /></div>
-      <Menu />
+      <div className={styles.menu} onClick={setMobile}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <Menu mobile={mobile} closePopup={() => setMobile(false)} />
     </header>
   )
 }

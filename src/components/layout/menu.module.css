@@ -4,8 +4,83 @@
   font-size: 2rem;
 }
 
+.logo {
+  display: none;
+}
+
 @media screen and (max-width: 800px) {
-  .menu {
+  .menubox {
     display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+
+  .menubox.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .show .logo {
+    display: block;
+    margin-bottom: 50px;
+  }
+
+  .show .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .show .menu li {
+    position: relative;
+  }
+
+  .show .menu li:not(:last-child):after {
+    position: absolute;
+    content: "";
+    width: 190px;
+    height: 2px;
+    background: url(../../assets/images/line.png);
+    background-size: 100% 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -23px;
+  }
+
+  .close {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    right: 40px;
+    top: 22px;
+    cursor: pointer;
+  }
+
+  .close::after,
+  .close::before {
+    content: '';
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    display: block;
+    left: 0;
+    top: 13px;
+    position: absolute;
+  }
+
+  .close:after {
+    transform: rotate(-45deg);
+  }
+
+  .close:before {
+    transform: rotate(45deg);
   }
 }
