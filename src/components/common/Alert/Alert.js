@@ -3,7 +3,7 @@ import { Context } from '../../../App';
 import usePopup from '../../../hooks/usePopup';
 import styled from './alert.module.css';
 
-export default function Alert({ children, width = '617px' }) {
+export default function Alert({ children, width = '100%' }) {
   const context = React.useContext(Context);
   const { closePopup } = usePopup();
 
