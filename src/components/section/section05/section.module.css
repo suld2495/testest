@@ -3,8 +3,8 @@
 }
 
 .background {
-  height: 1315px;
-  background-position: center;
+  height: 1195px;
+  background-position: top;
 }
 
 .text {
@@ -108,13 +108,29 @@
   }
 }
 
+@media screen and (max-width: 830px) {  
+  .title {
+    margin-top: 70px;
+  }
+}
+
+@media screen and (max-width: 800px) {  
+  .background {
+    background-position: center;
+  }
+}
+
 @media screen and (min-width: 641px) and (max-width: 800px) {
   .section {
-    height: 1270px !important
+    height: 1150px !important
   }
 }
 
 @media screen and (max-width: 640px) {
+  .section {
+    height: auto !important
+  }
+
   .pc {
     display: none;
   }
@@ -127,6 +143,10 @@
     width: 100%;
   }
   
+  .subtext {
+    margin-top: 150px;
+  }
+
   .subtext p {
     margin: 0 auto;
     word-break: keep-all;
@@ -213,14 +233,30 @@
   .subtext h2 {
     font-size: 3rem;
   }
+
+  .subtext {
+    margin-top: 35%;
+  }
+
+  .title {
+    margin-top: 16%;
+  }
 }
 
 @media screen and (max-width: 380px) {
   .subtext {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
 
   .reward > ul {
-    gap: 15px;
+    gap: 20px;
+  }
+
+  .link {
+    margin-top: 15%;
+  }
+
+  .subtext h2 + p {
+    margin-bottom: 7px;
   }
 }

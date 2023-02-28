@@ -17,7 +17,7 @@ export default function Section01() {
         </div>
         <div className={styled.subtext}>
           <p>대한민국 야구, 화이팅!</p>
-          <p>대한민국 야구 대표팀 진출 단계별 추가 보상 진급!</p>
+          <p>대한민국 야구 대표팀 진출 단계별 추가 보상 지급!</p>
         </div>
         <img className={styled.pc} src='/images/step.png' alt='사전예약' />
         <img className={styled.mobile} src='/images/mobile/step_m.png' alt='사전예약' />

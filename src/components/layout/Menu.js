@@ -4,7 +4,12 @@ import styles from './menu.module.css'
 
 export default function Menu({ mobile, closePopup }) {
   useScroll(mobile);
-  const menuList = [["사전예약"], ["커뮤니티"], ["쿠폰입력", "http://9up.aceproject.co.kr/coupon "], ["미디어"]];
+  const menuList = [
+    ["사전예약"], 
+    ["커뮤니티", "https://game.naver.com/lounge/9UP_Collectable"], 
+    ["쿠폰입력", "http://9up.aceproject.co.kr/coupon "], 
+    ["미디어", "https://www.youtube.com/@9up8"]
+  ];
   return (
     <div className={`${styles.menubox} ${mobile ? styles.show : ''}`}>
       <div onClick={closePopup} className={styles.close}></div>

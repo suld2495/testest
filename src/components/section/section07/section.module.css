@@ -7,9 +7,6 @@
   align-items: center;
   max-height: 1681px;
   box-sizing: border-box;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-y: top;
 }
 
 .text {
@@ -78,6 +75,22 @@
 
 .next {
   right: -62px;
+}
+
+
+@media screen and (max-width: 1920px) {
+  .section {
+    position: relative;
+    background-position: center;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 1681px;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position-y: top;
+  }
 }
 
 

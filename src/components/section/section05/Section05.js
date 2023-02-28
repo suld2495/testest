@@ -16,7 +16,7 @@ export default function Section05() {
     position: [0, 0]
   };
   const [popup, setPopup] = React.useState(initPopup);
-  const [height, backgroundImage] = useBackgrund('1315px', {
+  const [height, backgroundImage] = useBackgrund('1195px', {
     pc: 'url(/images/bg03.jpg)',
     mobile: 'url(/images/mobile/bg03_m.jpg)',
     mobileHeight: 1706
@@ -96,7 +96,6 @@ export default function Section05() {
           { popup.visible && <ItemBox title={popup.title} content={popup.content} position={popup.position} ref={popupRef} onClose={handleClosePopup} />}
         </div>
         <div className={styled.download}>
-          <h3>{'<9UP 프로야구>'}</h3>
           <Button background='#1fb0c5' border><a href={GOOGLE_APP_URL} className={styled.download_text}>다운로드하러 가기</a></Button>
         </div>
         <div className={styled.link}>
