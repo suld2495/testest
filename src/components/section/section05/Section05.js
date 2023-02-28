@@ -97,7 +97,7 @@ export default function Section05() {
         </div>
         <div className={styled.download}>
           <h3>{'<9UP 프로야구>'}</h3>
-          <Button background='#1fb0c5' border><span className={styled.download_text}>다운로드하러 가기</span></Button>
+          <Button background='#1fb0c5' border><a href={GOOGLE_APP_URL} className={styled.download_text}>다운로드하러 가기</a></Button>
         </div>
         <div className={styled.link}>
           <div><a href={GOOGLE_APP_URL}><img src="/images/googleplay.png" alt="구글"/></a></div>

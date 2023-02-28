@@ -1,15 +1,29 @@
 
-import React from 'react';
-import useBackgrund from '../../../hooks/useBackground';
+import React, { useCallback } from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import styled from './section.module.css';
 import { Carousel } from 'react-responsive-carousel';
 
+const BACKGROUND_HEIGHT = 640;
+
+const getBackground = () => {
+  if (window.outerWidth > BACKGROUND_HEIGHT) {
+    return 'url(/images/bg05.jpg)'
+  }
+
+  return 'url(/images/mobile/bg05_m.jpg)'
+};
+
 export default function Section01() {
-  const [, backgroundImage] = useBackgrund('1681px', {
-    pc: 'url(/images/bg05.jpg)',
-    mobile: 'url(/images/mobile/bg05_m.jpg)',
-    mobileHeight: 1131
+  const [backgroundImage, setBackgroundImage] = React.useState(getBackground);
+
+  const resize = useCallback(() => {
+    setBackgroundImage(getBackground);
+  }, []);
+
+  React.useEffect(() => {
+    window.addEventListener('resize', resize);
+    return () => window.removeEventListener('resize', resize);
   });
 
   return (
@@ -19,7 +33,9 @@ export default function Section01() {
           <img src="/images/title04.png" alt='EVENT2' />
         </div>
         <div className={styled.content}>
-          <a href='https://www.youtube.com/watch?v=0RRo0ssGBkM' className={styled.youtube}><img src="/images/youtube.jpg" alt='유튜브' /></a>
+          <a className={styled.youtube}>
+            <iframe src="https://www.youtube.com/embed/0RRo0ssGBkM?controls=0" title="YouTube video player" allowFullScreen></iframe>
+          </a>
           <div className={styled.container}>
             <Carousel
               renderArrowPrev={(clickHandler) => <div className={`${styled.arrow} ${styled.prev}`} onClick={clickHandler}><img src='/images/arrow_left.png' alt='왼쪽 화살표' /></div>}
