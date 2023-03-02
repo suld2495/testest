@@ -1,0 +1,44 @@
+.header {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  background-color: #0e1d3c;
+  height: 75px;
+}
+
+.logo {
+  font-size: 2rem;
+  padding-top: 7px;
+}
+
+.menu {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.menu span {
+  width: 25px;
+  height: 3px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 800px) {
+  .menu {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header {
+    padding: 0 20px
+  }
+
+  .header .logo img {
+    width: 90%;
+  }
+}
