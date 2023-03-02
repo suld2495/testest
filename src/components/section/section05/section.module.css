@@ -118,7 +118,6 @@
   .background {
     background-position: center;
   }
-<<<<<<< HEAD
 
   .subtext {
     margin-top: 27%;
@@ -128,17 +127,11 @@
     width: 100%;
     max-width: 702px;
   }
-=======
->>>>>>> 20e931f0de3c829f47a2e90c6a231432e3dd0bca
 }
 
 @media screen and (min-width: 641px) and (max-width: 800px) {
   .section {
-<<<<<<< HEAD
     height: 1250px !important
-=======
-    height: 1150px !important
->>>>>>> 20e931f0de3c829f47a2e90c6a231432e3dd0bca
   }
 }
 
